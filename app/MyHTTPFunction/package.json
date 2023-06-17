@@ -1,6 +1,7 @@
 {
   "author": "Sadrayan",
   "name": "my-http-function",
+  "description": "This is a TypeScript based Cloud Functions template.",
   "version": "0.1.0",
   "main": "dist/index.js",
   "scripts": {
@@ -18,13 +19,6 @@
     "start": "npm run build && npx @google-cloud/functions-framework --target=helloHTTPFunction",
     "test": "mocha -r ts-node/register src/test/**/*.test.ts"
   },
-  "keywords": [
-    "gcp",
-    "cloud functions",
-    "terraform",
-    "typescript"
-  ],
-  "description": "This is a TypeScript based Cloud Functions template.",
   "dependencies": {
     "@google-cloud/functions-framework": "^3.2.0",
     "googleapis": "^118.0.0"
