@@ -7,7 +7,7 @@
     "lint": "tslint --project tslint.json",
     "tsc": "tsc --project tsconfig.json",
     "cp-package": "copyfiles package.json tslint.json dist",
-    "build": "run-s lint tsc",
+    "build": "npm ci && run-s lint tsc",
     "clean": "rm -rf dist",
     "echo": "$npm_package_name",
     "zip:ci": "mkdir dist && zip -r dist/$npm_package_name.zip . -x \"./node_modules/*\" -x \"./dist/*\"",
