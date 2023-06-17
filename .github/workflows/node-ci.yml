@@ -41,5 +41,5 @@ jobs:
       uses: 'google-github-actions/upload-cloud-storage@v1'
       with:
         path: 'app/MyHTTPFunction/dist/my-http-function.zip'
-        destination: 'gs://artifact-sandbox-381502/MyHTTPFunction/myfunction-${{ github.sha }}.zip'
+        destination: 'artifact-sandbox-381502/MyHTTPFunction/myfunction-${{ github.sha }}.zip'
 
