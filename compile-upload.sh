@@ -2,7 +2,7 @@
 
 echo "------------ Building Project -----------------"
 cd app/MyHTTPFunction
-npm run build:ci
+npm run compile:ci
 cd -
 
 echo '------------ Uploading Artifacts -----------------'
