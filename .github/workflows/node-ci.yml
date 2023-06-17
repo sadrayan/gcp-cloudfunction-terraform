@@ -23,7 +23,23 @@ jobs:
 
     - run: npm ci
       working-directory: ./app/MyHTTPFunction
+
     - run: npm test
       working-directory: ./app/MyHTTPFunction
+
     - run: npm run compile:ci
       working-directory: ./app/MyHTTPFunction
+
+
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: `google-github-actions/auth@v0.4.0'
+      with:
+        credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+
+    - id: 'upload-file'
+      uses: 'google-github-actions/upload-cloud-storage@v1'
+      with:
+        path: 'app/MyHTTPFunction/dist/my-http-function.zip'
+        destination: 'gs://artifact-sandbox-381502/MyHTTPFunction/myfunction-${{ github.sha }}.zip'
+
