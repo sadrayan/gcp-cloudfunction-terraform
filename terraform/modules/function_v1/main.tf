@@ -1,4 +1,4 @@
-resource "google_cloudfunctions_function" "http_function" {
+module "google_cloudfunctions_function"  {
   name                  = "${var.name}-function"
   region                = var.region
   description           = "${var.name} function"
@@ -9,4 +9,5 @@ resource "google_cloudfunctions_function" "http_function" {
   timeout               = 60
   trigger_http          = true
   entry_point           = var.entry_point
+  source                = ""
 }
