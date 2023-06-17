@@ -6,11 +6,12 @@
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "esModuleInterop": true,
-    "rootDir": "src",
+//    "rootDir": "src",
     "outDir": "./dist",
     "strictNullChecks": true,
     "incremental": true,
-    "removeComments": true
+    "removeComments": true,
+//    "noEmit": true // Do not compile the JS (or TS) files in this project on build
   },
   "compileOnSave": true,
   "include": [

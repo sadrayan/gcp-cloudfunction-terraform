@@ -6,12 +6,14 @@
   "scripts": {
     "lint": "tslint --project tslint.json",
     "tsc": "tsc --project tsconfig.json",
-    "cp-package": "copyfiles * -e \"**/*.test.ts\"  dist",
+    "cp-package": "copyfiles package.json dist",
     "build": "run-s lint tsc cp-package",
     "clean": "rm -rf dist",
     "echo": "$npm_package_name",
     "zip:ci": "cd dist && zip -r -j $npm_package_name.zip *",
-    "build:ci": "npm run clean && run-s lint tsc cp-package && npm run zip:ci"
+    "build:ci": "npm run clean && run-s lint tsc cp-package && npm run zip:ci",
+    "gcp-build": "npm run build",
+    "start": "npm run build && npx @google-cloud/functions-framework --target=helloHTTPFunction"
   },
   "keywords": [
     "gcp",
@@ -21,7 +23,7 @@
   ],
   "description": "This is a TypeScript based Cloud Functions template.",
   "dependencies": {
-    "express": "^4.18.2",
+    "@google-cloud/functions-framework": "^3.2.0",
     "googleapis": "^118.0.0"
   },
   "license": "MIT",
@@ -33,7 +35,6 @@
     "@google-cloud/rcloadenv": "^3.0.1",
     "@google-cloud/storage": "^6.11.0",
     "@google/events": "^5.4.0",
-    "@types/express": "^4.17.11",
     "@types/node": "^20.3.1",
     "@types/request": "^2.48.5",
     "copyfiles": "^2.4.1",
