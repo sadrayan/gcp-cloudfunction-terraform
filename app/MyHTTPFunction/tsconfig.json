@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "outDir": "./dist",
+    "strictNullChecks": true,
+    "incremental": true,
+    "removeComments": true
+  },
+  "compileOnSave": true,
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
