@@ -2,7 +2,7 @@
   "author": "Sadrayan",
   "name": "my-http-function",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "tslint --project tslint.json",
     "tsc": "tsc --project tsconfig.json",
