@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint --project tslint.json",
     "tsc": "tsc --project tsconfig.json",
-    "cp-package": "copyfiles package.json dist",
+    "cp-package": "copyfiles package.json tslint.json dist",
     "build": "run-s lint tsc cp-package",
     "clean": "rm -rf dist",
     "echo": "$npm_package_name",

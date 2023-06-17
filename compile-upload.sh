@@ -1,10 +1,11 @@
 #!/bin/bash
 
-echo "------------ building project -------"
+echo "------------ Building Project -----------------"
 cd app/MyHTTPFunction
 npm run build:ci
 cd -
 
+echo '------------ Uploading Artifacts -----------------'
 git_sha=$(git rev-parse HEAD)
 sa="github-action-pipeline@sandbox-381502.iam.gserviceaccount.com"
 
