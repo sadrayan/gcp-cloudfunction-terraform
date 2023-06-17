@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: '18.x'
         cache: 'npm'
-      working-directory: ./app/MyHTTPFunction
+        cache-dependency-path: app/MyHTTPFunction/package-lock.json
 
     - run: npm ci
       working-directory: ./app/MyHTTPFunction
