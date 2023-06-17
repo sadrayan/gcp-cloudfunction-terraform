@@ -30,7 +30,7 @@ jobs:
     - run: npm run compile:ci
       working-directory: ./app/MyHTTPFunction
 
-    - id: Rename file
+    - id: 'rename-file'
       run: mv dist/my-http-function.zip dist/my-http-function-${{ github.sha }}.zip
       working-directory: ./app/MyHTTPFunction
 
