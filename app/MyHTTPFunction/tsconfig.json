@@ -1,23 +1,33 @@
 {
   "compilerOptions": {
-    "strict": true,
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
-    "noImplicitReturns": true,
     "esModuleInterop": true,
-//    "rootDir": "src",
-    "outDir": "./dist",
-    "strictNullChecks": true,
-    "incremental": true,
-    "removeComments": true,
-//    "noEmit": true // Do not compile the JS (or TS) files in this project on build
-  },
-  "compileOnSave": true,
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "rootDir": "src",
+    "outDir": "dist",
+  }
 }
+//{
+//  "compilerOptions": {
+//    "strict": true,
+//    "target": "es6",
+//    "module": "commonjs",
+//    "moduleResolution": "node",
+//    "noImplicitReturns": true,
+//    "esModuleInterop": true,
+////    "rootDir": "src",
+//    "outDir": "./dist",
+//    "strictNullChecks": true,
+//    "incremental": true,
+//    "removeComments": true,
+////    "noEmit": true // Do not compile the JS (or TS) files in this project on build
+//  },
+//  "compileOnSave": true,
+//  "include": [
+//    "src/**/*.ts"
+//  ],
+////  "exclude": [
+////    "node_modules"
+////  ]
+//}
