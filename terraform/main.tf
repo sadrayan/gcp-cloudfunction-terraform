@@ -1,10 +1,10 @@
 
 module "my_http_function" {
-  source = "./modules/function_v1"
+  source       = "modules/function_v2"
   archive_name = "MyHTTPFunction/myfunction-${var.revision}.zip"
-  bucket_name = var.bucket_name
-  entry_point = "helloHTTPFunction"
-  name = "myHelloFunction"
+  bucket_name  = var.bucket_name
+  entry_point  = "helloHTTPFunction"
+  name         = "myHelloFunction"
 }
 
 #resource "google_service_account" "function_invoker_account" {
