@@ -1,6 +1,3 @@
-import { Request, Response } from "express";
+import { HttpFunction } from '@google-cloud/functions-framework';
 
-export const helloHTTPFunction = async (req: Request, res: Response) => {
-    // console.log(req);
-    res.send("hello");
-};
+export const hello: HttpFunction = (req, res) => res.send("Hello!")
