@@ -42,4 +42,5 @@ jobs:
       with:
         path: 'app/MyHTTPFunction/dist/my-http-function.zip'
         destination: 'artifact-sandbox-381502/MyHTTPFunction/myfunction-${{ github.sha }}.zip'
+        parent: false
 
