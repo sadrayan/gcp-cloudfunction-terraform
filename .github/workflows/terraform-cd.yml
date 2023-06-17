@@ -49,7 +49,7 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -lock=false -var "revision=$git_sha" -var-file="dev/terraform.tfvars" -out tfplan
+      run: terraform plan -lock=false -var "revision=${{ github.sha }}" -var-file="dev/terraform.tfvars" -out tfplan
       working-directory: ./terraform
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
