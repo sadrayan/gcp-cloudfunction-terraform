@@ -20,3 +20,12 @@ resource "google_cloudfunctions2_function" "function" {
     timeout_seconds    = 60
   }
 }
+
+# IAM entry for all users to invoke the function
+resource "google_cloudfunctions2_function_iam_member" "member" {
+  project = google_cloudfunctions2_function.function.project
+  location = google_cloudfunctions2_function.function.location
+  cloud_function = google_cloudfunctions2_function.function.name
+  role = "roles/cloudfunctions.invoker"
+  member = "allUsers"
+}
