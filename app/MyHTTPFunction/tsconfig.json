@@ -6,7 +6,11 @@
     "esModuleInterop": true,
     "rootDir": "src",
     "outDir": "dist",
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
 }
 //{
 //  "compilerOptions": {
