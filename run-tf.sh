@@ -7,6 +7,6 @@ cd terraform
 
 export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token --impersonate-service-account=github-action-pipeline@sandbox-381502.iam.gserviceaccount.com)
 
-terraform plan -var "revision=$git_sha" -var-file="dev/terraform.tfvars" -out tfplan
+terraform plan -lock=false -var "revision=$git_sha" -var-file="dev/terraform.tfvars" -out tfplan
 
-terraform apply tfplan
+terraform apply -lock=false tfplan
