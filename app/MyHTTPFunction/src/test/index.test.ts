@@ -18,7 +18,7 @@ describe('helloWorld function', () => {
                 .end((err, res) => {
                     res.should.have.status(200);
                     res.text.should.be.a('string');
-                    res.text.should.equal('Hello!');
+                    res.text.should.equal('Hello!!');
                     done();
                 });
         });
